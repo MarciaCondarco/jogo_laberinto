@@ -12,10 +12,10 @@ contexto.fillRect(0, 0, canvas.width, canvas.height)
 
 const image = new Image()
 // criando uma variavel que contêm a imagem do mapa
-image.src = './mapajogo.png'
+image.src = './Assets/mapajogo.png'
 
 const playerImage = new Image();
-playerImage.src = './playerdown.png'
+playerImage.src = './Assets/playerdown.png'
 
 console.log(image)
 
@@ -28,7 +28,7 @@ image.onload = () => {
         playerImage.width/4,
         playerImage.height,
         // determinando recorte o sprites do player
-        canvas.width/3 - playerImage.width/3, 
+        canvas.width/3 - (playerImage.width/4)/2, 
         canvas.height/2 - playerImage.height/3,
         playerImage.width/4,
         playerImage.height
