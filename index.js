@@ -20,9 +20,21 @@ playerImage.src = './playerdown.png'
 console.log(image)
 
 image.onload = () => {
-    contexto.drawImage(image, 0 ,-900)
-    contexto.drawImage(playerImage, canvas.width/3, canvas.height/2)
-    // definindo a posição X e Y da imagem do mapa do jogo
+    contexto.drawImage(image, 0 ,-935)
+    contexto.drawImage(
+        playerImage, 
+        0,
+        0,
+        playerImage.width/4,
+        playerImage.height,
+        // determinando recorte o sprites do player
+        canvas.width/3 - playerImage.width/3, 
+        canvas.height/2 - playerImage.height/3,
+        playerImage.width/4,
+        playerImage.height
+        // determinando a posição do sprites do player
+    )
+    // definindo a posição X e Y da imagem do mapa do jogo e player
 
 }
 // imagem do mapa do jogo vai carregar e chamar a variavel contexto 
